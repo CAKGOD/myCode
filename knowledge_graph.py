@@ -12,6 +12,7 @@ class knowledge_graph():
         user_info_dict = {}
         user_relation_dict = {}
         for i in user_logins:
+            # basic info
             temp_dict = js.loads(open('../data/author/basic/' + i + '_api.json').readline())
             if i not in user_info_dict.keys():
                 user_info_dict[i] = {'name': temp_dict['name'],
@@ -31,6 +32,17 @@ class knowledge_graph():
                                      'updated_at': temp_dict['updated_at'],
                                      'url': temp_dict['html_url'],
                                      'avatar_url': temp_dict['avatar_url']}
+            
+            # orgnization info
+            user_info_dict[i]['orgnization'] = []
+            try:
+                temp_list = js.loads(open('../data/author/orgnization/' + i + '_orgnization_api.json').readline())
+                for j in temp_list:
+                    user_info_dict[i]['orgnization'].append(j['login'])
+            except:
+                print(f'There are not any orgnization info of {i}.')
+            
+            # following relation info
             temp_list = js.loads(open('../data/author/following/' + i + '_following.json').readline())
             if i not in user_relation_dict.keys():
                 user_relation_dict[i] = []

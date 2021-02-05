@@ -20,13 +20,13 @@ if __name__ == '__main__':
                    '117.57.22.235:4278',
                    '112.123.40.239:4270'])
     # set some default values of file tool
-    #ft = file_tool('../data/author/basic/')
+    ft = file_tool('../data/author/basic/')
 
     # set some default values of rust tool
     #rt = rust_tool('./other/thanks')
 
     # set some default values of knowledge graph
-    #kg = knowledge_graph()
+    kg = knowledge_graph()
 
     # download crates basic info
     with open('../data/crate/label/all_crate_name.txt') as f1:
@@ -37,12 +37,12 @@ if __name__ == '__main__':
     #srp.multi_process_download(srp.download_crates_io_basic_info, download_goal, 16)
 
     # extract crate info
-    crate_list = srp.extract_crates_author_info(crate_names)
-    print(crate_list[1000])
+    #crate_list = srp.extract_crates_author_info(crate_names)
+    #print(crate_list[1000])
 
-    with open('./crate_list.json', 'w') as f:
-        import json
-        json.dump(crate_list, f)
+    #with open('./crate_list.json', 'w') as f:
+    #    import json
+    #    json.dump(crate_list, f)
 
     # download basic commit
     #with open('../data/crate/commits/basic/download_goal.txt') as f:
@@ -69,6 +69,13 @@ if __name__ == '__main__':
     #srp.multi_process_download(srp.download_temp, authors, 16)
 
     # extract user info and construct Graph
-    #authors = [i.split('_api')[0] for i in ft.get_all_current_files_name()]
+    authors = [i.split('_api')[0] for i in ft.get_all_current_files_name()]
+    user_info_dict, user_following_relation_dict = kg.extract_user_info_relations(authors)
+    print(user_info_dict['KodrAus'])
+    print(user_following_relation_dict['KodrAus'])
+    import json
+    json.dump(user_info_dict, open('../data/知识图谱数据/rust_user_info.json', 'w'))
+    json.dump(user_following_relation_dict, open('../data/知识图谱数据/rust_following_relation.json', 'w'))
+
     #kg.construct_user_graph(kg.extract_user_info_relations(authors)[0], kg.extract_user_info_relations(authors)[1])
     #kg.save_graph()
