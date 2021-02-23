@@ -4,6 +4,7 @@ import requests
 import time
 import os
 import multiprocessing
+from bs4 import BeautifulSoup
 
 
 class scraper:
@@ -67,7 +68,7 @@ class scraper:
             #'Sec-Fetch-User': '?1',
             #'Upgrade-Insecure-Requests': '1',
             'user-Agent': user_agent,
-            'Authorization': 'token ' + header_token
+            #'Authorization': 'token ' + header_token
         }
         proxies = {'http': random.choice(self.proxies_ip_list)}
         #response = requests.get(url, headers=headers, proxies=proxies, timeout=5)
@@ -78,7 +79,7 @@ class scraper:
             print(f'Response from {url} error.', response.status_code)
             return
 
-        print(f'Response from {url} succeed.')
+        #print(f'Response from {url} succeed.')
 
         return response
 
@@ -355,3 +356,41 @@ class scraper:
             self.wirte_downloaded_item_to_file('../data/author/label/following_label.txt', user_logins)
             print(f'the following info of {i} has been downloaded')
         time.sleep(random.randint(1, 3))
+
+
+    def extract_author_commit_info_from_github(self, author_login, begin_year, begin_month, end_year, end_month):
+        author_dict = {'contributions': {}}
+        for i in range(begin_year, end_year+1):
+            if i == begin_year:
+                start, end = begin_month, 13
+            elif i == end_year:
+                start, end = 1, end_month + 1
+            else:
+                start, end = 1, 13
+            for j in range(start, end):
+                if j < 10:
+                    contribution_url = 'https://github.com/' + author_login + '?tab=overview&from=' + str(i) + '-0' + str(j) + '-01&to=' + str(i) + '-0' + str(j) + '-31'
+                else:
+                    contribution_url = 'https://github.com/' + author_login + '?tab=overview&from=' + str(i) + '-' + str(j) + '-01&to=' + str(i) + '-' + str(j) + '-31'
+                
+                res = self.requests_with_header_and_proxies(contribution_url)
+                soup = BeautifulSoup(res.text, 'html.parser')
+
+                # contributions
+                contributions = soup.find_all('div', 'col-8 css-truncate css-truncate-target lh-condensed width-fit flex-auto min-width-0')
+                result = ''
+                for k in contributions:
+                    for l in k.children:
+                        try:
+                            result += l.text.strip()
+                            result += ' '
+                        except:
+                            pass
+                    result = result[0:-1] + ';'
+                times = str(i) + '-' + str(j)
+
+                if times not in author_dict['contributions'].keys():
+                    author_dict['contributions'][times] = result.strip()
+
+                print(times)
+                print(result)
