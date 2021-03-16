@@ -3,7 +3,6 @@ import dash
 from dash.dependencies import Input, Output
 import dash_html_components as html
 import dash_pivottable
-
 #from data import data
 
 
@@ -15,7 +14,7 @@ def Header(name, app):
     return html.Div(
         [
             html.H1(name, style={"margin": 10, "display": "inline"}),
-            html.A(dash_logo, href="https://github.com/CAKGOD"),
+            html.A(dash_logo, href="https://www.huawei.com/cn/"),
             html.A(ghub_logo, href="https://github.com/CAKGOD"),
             html.Hr(),
         ]
@@ -23,7 +22,8 @@ def Header(name, app):
 
 
 with open('./data/data.json') as f:
-    data = js.loads(f.readline())
+    temp = js.loads(f.readline())
+    data = temp[0:1] + temp[-5000:]
 
 app = dash.Dash(__name__)
 app.title = "开源智能装备智库舆情监控"
@@ -33,16 +33,17 @@ app.layout = html.Div(
     [
         Header("开源智能装备智库舆情监控", app),
         dash_pivottable.PivotTable(
+            menuLimit=50000,
             id="table",
             data=data,
-            cols=["keywords"],
+            cols=["time"],
             colOrder="key_a_to_z",
-            rows=["time"],
+            rows=["keywords"],
             rowOrder="key_a_to_z",
-            rendererName="table",
+            rendererName="Table Col Heatmap",
             aggregatorName="Count",
             vals=["count"],
-            valueFilter={"Day of Week": {"Thursday": False}},
+            valueFilter={"time": {'unknown': False}},
         ),
         html.Div(id="output"),
     ]
@@ -60,6 +61,7 @@ app.layout = html.Div(
         Input("table", "rendererName"),
     ],
 )
+
 def display_props(cols, rows, row_order, col_order, aggregator, renderer):
     return [
         html.P(str(cols), id="columns"),

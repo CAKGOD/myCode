@@ -15,18 +15,21 @@ def get_all_files_name(path, file_list):
 file_list = []
 get_all_files_name('/home/cakgod/code/data/BCG/', file_list)
 
-keyword_list = ['bank', 'pressure', 'nature']
-data = [["orgnization", "time", "author", "title", "text",  "keywords", "count"]]
+keyword_list = ['china', 'huawei', 'weapon', 'war', 'AI', 'machine learning', 'deep learning', 'protein folding', 'meteorological', 'COVID-19', '5G', 'army']
+data = [["orgnization", "time", "keywords", "count"]]
 for i in file_list:
     if i.split('.')[-1] != 'json':
         continue
-    tem_str = ''
     temp = js.load(open(i, 'r', encoding='utf-8'))
-    temp_list = [temp['organization'], temp['time'], temp['author'], temp['title'], temp['artical']]
+    if temp['time'] == '':
+        new_time = 'unknown'
+    else:
+        new_time = temp['time']
     for j in keyword_list:
-        if j in temp_list[4]:
+        if j in temp['artical']:
+            temp_list = [temp['organization'], new_time]
             temp_list.append(j)
-            temp_list.append(temp_list[4].count(j))
+            temp_list.append(temp['artical'].count(j))
             data.append(temp_list)
 
 with open('./data.json', 'w') as f:
