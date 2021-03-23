@@ -6,9 +6,9 @@ from knowledge_graph import knowledge_graph
 if __name__ == '__main__':
     
     # set some default values of scraper
-    srp = scraper(['shanchenqi:3c0709d2bb84222f0fb8ff1fc559420d566b4df4',
+    srp = scraper(['shanchenqi:f29c580f00f73ead737969789b5bcb1dcad744ed',
                    'sunbo57123:755f2fef6f366bc313d7781ed1d2583a25d28f97',
-                   'CAKGOD:14e9ca9f60869cc4e885a7dc252bae838d803e4e'],
+                   'CAKGOD:721b598611c672b0441c8f916e6dab76f84b3052'],
                   ['36.33.20.38:4226',
                    '182.132.103.182:4245',
                    '124.161.43.101:4258',
@@ -63,7 +63,7 @@ if __name__ == '__main__':
     #file_list = ft.get_all_current_files_name()
     #self.extract_url_commit_spec_info(url_commit_dict, file_list)
 
-    srp.extract_author_commit_info_from_github('sunbo57123', 2020, 1, 2021, 2)
+    #srp.extract_author_commit_info_from_github('sunbo57123', 2020, 1, 2021, 2)
 
     # download following of users
     #authors = [i.split('_api')[0] for i in ft.get_all_current_files_name()]
@@ -81,3 +81,16 @@ if __name__ == '__main__':
 
     #kg.construct_user_graph(kg.extract_user_info_relations(authors)[0], kg.extract_user_info_relations(authors)[1])
     #kg.save_graph()
+
+    import re
+    with open('../../data/github/baby.txt') as f:
+        data = [j for i in f.readlines() for j in re.split('[\t\n ]', i.strip()) if 'https://github.com/' in j and j.count('/') == 4 and j[-1] != '/']
+    new_data = []    
+    for k in data:
+        if k[-4:] == '.git':
+            new_data.append(k[0:-4])
+        else:
+            new_data.append(k)
+    for i in new_data:
+        user_name, repo_name = j.split('/')[-2], j.split('/')[-1]
+        #srp.download_issues_main_to_json(user_name, repo_name)

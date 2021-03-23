@@ -68,7 +68,7 @@ class scraper:
             #'Sec-Fetch-User': '?1',
             #'Upgrade-Insecure-Requests': '1',
             'user-Agent': user_agent,
-            #'Authorization': 'token ' + header_token
+            'Authorization': 'token ' + header_token
         }
         proxies = {'http': random.choice(self.proxies_ip_list)}
         #response = requests.get(url, headers=headers, proxies=proxies, timeout=5)
@@ -394,3 +394,26 @@ class scraper:
 
                 print(times)
                 print(result)
+    
+
+    def download_issues_main_to_json(self, user_name, repo_name):
+        os.system('mkdir ' + repo_name)
+        i = 1
+        while i:
+            url = 'https://api.github.com/repos/' + user_name + '/' + repo_name + '/issues?page=' + str(i) + '&per_page=100'
+            response = self.requests_with_header_and_proxies(url)
+            if json.loads(response.text) == []:
+                break
+            self.save_reponse_to_json(response, './' + repo_name + '/' + repo_name + '_' + str(i) + '_main.json')
+            i += 1
+
+
+    def download_issues_comments_to_json(self, repo_name):
+        i = 1
+        while i:
+            with open('./' + repo_name + '/' + repo_name + '_' + str(i) + '_main.json') as f:
+                data = json.loads(f.readline())
+            for j in range(len(data)):
+                comments_url = data[j]['comments_url']
+                response = self.requests_with_header_and_proxies(comments_url)
+                self.save_reponse_to_json(response, './' + repo_name + '/' + repo_name + '_' + str(i) + '_' + str(j) +'_comments.json')

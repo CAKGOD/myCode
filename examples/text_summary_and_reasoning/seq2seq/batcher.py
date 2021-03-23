@@ -290,7 +290,7 @@ if __name__ == '__main__':
     vocab = Vocab(vocab_path)
 
     b = batcher(vocab, params)
-    for i ,j in b:
+    for i, j in b:
         import pdb
 
         pdb.set_trace()
