@@ -1,0 +1,244 @@
+China|---------Error---------
+None|---------None---------
+beijing|---------Error---------
+None|---------None---------
+None|---------None---------
+Santa monica|---------Error---------
+Boston, MA|---------Error---------
+None|---------None---------
+日本|---------Error---------
+Wellington, New Zealand|---------Error---------
+None|---------None---------
+Houston|---------Error---------
+Kiev|---------Error---------
+The Netherlands|---------Error---------
+Seattle, WA|---------Error---------
+None|---------None---------
+Kyiv, Ukraine|---------Error---------
+None|---------None---------
+Russia, Saint-Petersburg|---------Error---------
+Orem, UT|---------Error---------
+galway|---------Error---------
+Bangalore|---------Error---------
+None|---------None---------
+Slovenia|---------Error---------
+None|---------None---------
+Russia, Moscow|---------Error---------
+Budapest|---------Error---------
+New York|---------Error---------
+None|---------None---------
+None|---------None---------
+Fort Worth, TX|---------Error---------
+Vancouver, BC|---------Error---------
+None|---------None---------
+None|---------None---------
+Israel|---------Error---------
+None|---------None---------
+Research Triangle Park, NC, USA|---------Error---------
+Berlin, Germany|---------Error---------
+New York, NY, USA|---------Error---------
+None|---------None---------
+None|---------None---------
+None|---------None---------
+Seville|---------Error---------
+Germany|---------Error---------
+Hangzhou|---------Error---------
+Kanagawa, Japan|---------Error---------
+Cuenca, Ecuador|---------Error---------
+None|---------None---------
+London, UK|---------Error---------
+None|---------None---------
+None|---------None---------
+Munich, Germany|---------Error---------
+PID 1|---------Error---------
+None|---------None---------
+Kaunas, Lithuania|---------Error---------
+Paris|---------Error---------
+Nanjing, China|---------Error---------
+None|---------None---------
+None|---------None---------
+None|---------None---------
+None|---------None---------
+Berlin, Germany|---------Error---------
+Madrid|---------Error---------
+New England|---------Error---------
+None|---------None---------
+None|---------None---------
+shenzhen china |---------Error---------
+Cary, NC|---------Error---------
+Wroclaw, Poland|---------Error---------
+None|---------None---------
+Earth|---------Error---------
+Houston, Texas|---------Error---------
+beijing|---------Error---------
+San Francisco, CA|---------Error---------
+South Africa|---------Error---------
+France|---------Error---------
+None|---------None---------
+None|---------None---------
+Delft, The Netherlands|---------Error---------
+Boston|---------Error---------
+None|---------None---------
+Berlin, Germany|---------Error---------
+Austin, TX|---------Error---------
+Bochum|---------Error---------
+London, UK|---------Error---------
+Leipzig, Germany|---------Error---------
+None|---------None---------
+Lawrence, KS|---------Error---------
+None|---------None---------
+Warszawa|---------Error---------
+New York, NY|---------Error---------
+Hangzhou, Zhejiang, China|---------Error---------
+Gibraltar|---------Error---------
+Dublin, Ireland|---------Error---------
+New York City|---------Error---------
+Copenhagen|---------Error---------
+Virginia, USA|---------Error---------
+None|---------None---------
+None|---------None---------
+Left Bank of the '90s|---------Error---------
+Ann Arbor, MI|---------Error---------
+None|---------None---------
+None|---------None---------
+Germany, Dortmund|---------Error---------
+Seattle, WA|---------Error---------
+Munich|---------Error---------
+New York, NY|---------Error---------
+None|---------None---------
+None|---------None---------
+None|---------None---------
+Palo Alto, CA|---------Error---------
+None|---------None---------
+None|---------None---------
+Montana|---------Error---------
+None|---------None---------
+New York, NY|---------Error---------
+Gaithersburg, MD|---------Error---------
+Bangalore, Karnataka, India|---------Error---------
+None|---------None---------
+None|---------None---------
+Germany|---------Error---------
+None|---------None---------
+None|---------None---------
+China |---------Error---------
+None|---------None---------
+Bonn, Germany|---------Error---------
+None|---------None---------
+None|---------None---------
+Earth|---------Error---------
+China|---------Error---------
+California|---------Error---------
+None|---------None---------
+None|---------None---------
+None|---------None---------
+None|---------None---------
+Portland, OR|---------Error---------
+Ohio, USA|---------Error---------
+None|---------None---------
+None|---------None---------
+California|---------Error---------
+Los Angeles, CA|---------Error---------
+Shenzhen, China|---------Error---------
+None|---------None---------
+India|---------Error---------
+None|---------None---------
+None|---------None---------
+None|---------None---------
+Waterloo, ON, Canada|---------Error---------
+Lyon|---------Error---------
+None|---------None---------
+Boston, MA|---------Error---------
+The Free State of New Hampshire|---------Error---------
+None|---------None---------
+None|---------None---------
+Brisbane, Australia|---------Error---------
+None|---------None---------
+Switzerland|---------Error---------
+Madrid, Spain|---------Error---------
+Jakarta, Indonesia|---------Error---------
+Germany/Deutschland|---------Error---------
+Tokyo, Japan|---------Error---------
+Poland|---------Error---------
+None|---------None---------
+Daresbury, United Kingdom|---------Error---------
+None|---------None---------
+Frankfurt a.Main, Germany|---------Error---------
+Turkey|---------Error---------
+None|---------None---------
+Singapore|---------Error---------
+Zürich, Switzerland|---------Error---------
+Rutherford Appleton Laboratory, Harwell, Oxfordshire, UK|---------Error---------
+Palo Alto, California|---------Error---------
+Menlo Park, CA|---------Error---------
+The Netherlands, near Amsterdam|---------Error---------
+None|---------None---------
+Berlin, Germany|---------Error---------
+None|---------None---------
+None|---------None---------
+London|---------Error---------
+None|---------None---------
+None|---------None---------
+Minnesota|---------Error---------
+None|---------None---------
+None|---------None---------
+Russia|---------Error---------
+Ostrava, Czech Republic|---------Error---------
+Seattle|---------Error---------
+Marin County, CA|---------Error---------
+None|---------None---------
+None|---------None---------
+Caen, France|---------Error---------
+None|---------None---------
+London, England|---------Error---------
+Berlin, Germany|---------Error---------
+None|---------None---------
+Germany|---------Error---------
+None|---------None---------
+None|---------None---------
+Vancouver|---------Error---------
+Atlanta, GA|---------Error---------
+Kyoto, Japan|---------Error---------
+New York, NY|---------Error---------
+Tempe AZ |---------Error---------
+San Francisco, CA|---------Error---------
+None|---------None---------
+Porto Alegre/RS - Brasil|---------Error---------
+None|---------None---------
+None|---------None---------
+Atlanta, GA|---------Error---------
+Seattle, WA|---------Error---------
+Toronto, Canada|---------Error---------
+Wisconsin, USA|---------Error---------
+Brisbane, Australia|---------Error---------
+Amsterdam, The Netherlands|---------Error---------
+None|---------None---------
+Vancouver, BC, Canada|---------Error---------
+Clermont-Ferrand|---------Error---------
+Paris|---------Error---------
+None|---------None---------
+None|---------None---------
+Berlin, Germany|---------Error---------
+None|---------None---------
+Los Angeles, CA|---------Error---------
+Argentina|---------Error---------
+None|---------None---------
+None|---------None---------
+Heidelberg, Germany|---------Error---------
+None|---------None---------
+Shanghai|---------Error---------
+None|---------None---------
+Kirkland, WA|---------Error---------
+None|---------None---------
+Phoenix, AZ|---------Error---------
+None|---------None---------
+New York|---------Error---------
+None|---------None---------
+Dublin, Ireland|---------Error---------
+None|---------None---------
+Saratov, Russia|---------Error---------
+San Francisco, CA|---------Error---------
+Germany |---------Error---------
+China|---------Error---------
+None|---------None---------
+beijing|---------Error---------
